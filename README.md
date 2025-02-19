@@ -19,7 +19,7 @@ A simple, interactive, and user-friendly Task Management Application that helps 
 
 ### 1️⃣ Clone the Repository
 bash
-git clone https://github.com/Yuvi3007/ChronoFlow.git
+git clone https://github.com/yuvi3007/ChronoFlow.git
 cd ChronoFlow
 
 
