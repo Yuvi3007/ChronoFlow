@@ -1,0 +1,222 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f9;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.task-manager-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #343a40;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+#priority-btn,
+#start-date-btn,
+#time-btn {
+  background-color: #343a40;
+}
+
+#add-task-btn {
+  background-color: #28a745;
+}
+
+#add-task-btn:hover {
+  background-color: #218838;
+}
+
+.mark-completed-btn {
+  background-color: #17a2b8;
+}
+
+.mark-completed-btn:hover {
+  background-color: #138496;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Table Container */
+.task-table-container {
+  max-height: 300px; /* Adjust as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: none; /* Hidden initially */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table thead {
+  background-color: #343a40;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: center;
+}
+
+table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+table tr:hover {
+  background-color: #e9ecef;
+}
+
+.congratulations-message {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.congratulations-message.fadeOut {
+  animation: fadeOut 0.5s ease-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Clock Animation */
+#clock-animation {
+  display: none;
+  width: 50px;
+  height: 50px;
+  margin: 10px auto;
+  border: 5px solid #28a745;
+  border-radius: 50%;
+  border-top: 5px solid transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#priority-options {
+  background-color: #343a40; /* Dark background for contrast */
+  color: #f5baba;               /* White text */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  position: absolute;
+  z-index: 10;
+}
+
+#priority-options .priority-level {
+  display: block;
+  padding: 5px 10px;
+  color: #461212;
+  text-align: left;
+  cursor: pointer;
+}
+
+#priority-options .priority-level:hover {
+  background-color: #373c40; /* Slightly lighter on hover */
+}
+.task-list-container {
+  max-height: 300px;   /* Adjust this height as needed */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.full-page-clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.45;
+  filter: blur(2px);
+}
+
+.full-page-clock img {
+  width: 80vw;
+  height: auto;
+}
+
+
+
+
+
+

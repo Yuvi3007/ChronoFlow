@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="task-manager-container">
+        <h1>ChronoFlow</h1>
+
+        <!-- Search and Filter -->
+        <div class="search-filter">
+            <input type="text" id="search-task" placeholder="Search tasks...">
+            <select id="filter-priority">
+                <option value="">Filter by Priority</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <select id="filter-status">
+                <option value="">Filter by Status</option>
+                <option value="completed">Completed</option>
+                <option value="not-completed">Not Completed</option>
+            </select>
+        </div>
+
+        <!-- Add Task Section -->
+        <input type="text" id="task-requirements" placeholder="Please add task" required>
+
+        <!-- Priority Box -->
+        <div class="priority-box">
+            <button id="priority-btn">Select Priority</button>
+            <div id="priority-options" class="priority-options">
+                <button class="priority-level" data-priority="low">Low</button>
+                <button class="priority-level" data-priority="medium">Medium</button>
+                <button class="priority-level" data-priority="high">High</button>
+            </div>
+        </div>
+
+        <!-- Start Date Box -->
+        <div class="start-date-box">
+            <button id="start-date-btn">Select Start Date</button>
+            <input type="date" id="start-date" style="display: none;" required>
+        </div>
+
+        <div class="time-box">
+          <button id="time-btn">Select Time</button>
+          <input type="time" id="task-time" style="display: none;" required>
+      </div>
+        
+        <button id="add-task-btn">Submit</button>
+
+        <!-- Success Message and Clock Animation -->
+        <p id="success-message" style="display: none; color: green;">Task added successfully!!!</p>
+
+        <div id="clock-animation"></div>
+
+        <!-- Task Table -->
+        <div class="task-list-container">
+        <table id="task-table" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Start Date</th>
+                    <th>Time</th>
+                    <th>Mark Completed</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+  
+</div>
+<div class="full-page-clock">
+    <img src="Clock.jpg" alt="Clock">
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
